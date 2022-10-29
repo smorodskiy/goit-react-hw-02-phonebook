@@ -23,7 +23,7 @@ export const ContactInfo = styled.li`
 // Contact
 export const Contact = styled.p`
   /* color: #35d8ac; */
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
 `;
 

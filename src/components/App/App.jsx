@@ -88,18 +88,16 @@ class App extends Component {
     return (
       <Container>
         <Section title="Phonebook">
-          <Phonebook
-            onSubmit={this.handleAddContact}
-          />
+          <Phonebook onSubmit={this.handleAddContact} />
         </Section>
 
         <Section title="Contacts">
           <Filter onInputFilter={this.handleInputFilter} />
-          <Contacts
-            contacts={contactsToShow}
-            onDeleteUser={this.handleDeleteContact}
-          />
         </Section>
+        <Contacts
+          contacts={contactsToShow}
+          onDeleteUser={this.handleDeleteContact}
+        />
       </Container>
     );
   }

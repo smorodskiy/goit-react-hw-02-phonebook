@@ -1,6 +1,7 @@
 // For stylish components
 import styled from 'styled-components';
 
+// Button
 export const AddButton = styled.button`
   align-items: center;
   appearance: none;
@@ -19,7 +20,7 @@ export const AddButton = styled.button`
   font-weight: 500;
   justify-content: center;
   line-height: 24px;
-  margin: 0;
+  margin-top: 12px;
   /* min-height: 64px; */
   outline: none;
   overflow: visible;

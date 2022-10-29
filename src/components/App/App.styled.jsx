@@ -6,8 +6,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
-  padding: 100px;
+  margin: auto;
+  padding: 100px 0 100px 0;
   border-radius: 50px;
   gap: 15px;
 `;

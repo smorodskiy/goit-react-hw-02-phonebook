@@ -10,6 +10,8 @@ export const Field = styled.input`
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
   border: 0;
   outline: 0;
-  padding: 22px 18px;
+  padding: 13px 19px;
+  line-height: 2;
+  margin-top: 5px;
   margin-bottom: 10px;
 `;
