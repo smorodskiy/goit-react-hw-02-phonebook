@@ -61,6 +61,4 @@ export { Phonebook };
 // Types
 Phonebook.propTypes = {
   onSubmit: PropTypes.func.isRequired,
-  onInputName: PropTypes.func.isRequired,
-  onInputNumber: PropTypes.func.isRequired,
 };
