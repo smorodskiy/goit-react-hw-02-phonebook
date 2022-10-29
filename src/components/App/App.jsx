@@ -22,10 +22,10 @@ class App extends Component {
   };
 
   // Add contacts
-  handleAddContact = e => {
+  handleAddContact = (e, name, number) => {
     e.preventDefault();
-    const currentName = this.state.name;
-    const currentNumber = this.state.number;
+    const currentName = name;
+    const currentNumber = number;
     const contacts = this.state.contacts;
 
     // Check on exist contact
@@ -62,18 +62,6 @@ class App extends Component {
     });
   };
 
-  // On input name
-  handleInputName = e => {
-    const newName = e.target.value;
-    this.setState({ name: newName });
-  };
-
-  // On input number
-  handleInputNumber = e => {
-    const newNumber = e.target.value;
-    this.setState({ number: newNumber });
-  };
-
   // On input filter
   handleInputFilter = e => {
     const newFilter = e.target.value;
@@ -102,8 +90,6 @@ class App extends Component {
         <Section title="Phonebook">
           <Phonebook
             onSubmit={this.handleAddContact}
-            onInputName={this.handleInputName}
-            onInputNumber={this.handleInputNumber}
           />
         </Section>
 
