@@ -1,24 +1,26 @@
 import React from 'react';
 import { Component } from 'react';
-import { nanoid } from 'nanoid';
 
 // Check types of props
 import PropTypes from 'prop-types';
+import { DeleteButton, Contact, ContactInfo, ContactList } from './Contacts.styled';
 
 class Contacts extends Component {
   render() {
-    const { contacts, handleOnDeleteUser } = this.props;
+    const { contacts, onDeleteUser } = this.props;
     return (
-      <ul>
+      <ContactList>
         {contacts.map(contact => {
           return (
-            <li key={contact.id}>
-              <span>{contact.name}</span>
-              <button user={contact.name} onClick={handleOnDeleteUser}>Delete</button>
-            </li>
+            <ContactInfo key={contact.id}>
+              <Contact>
+                {contact.name}: {contact.number}
+              </Contact>
+              <DeleteButton onClick={() => onDeleteUser(contact.id)}>Delete</DeleteButton>
+            </ContactInfo>
           );
         })}
-      </ul>
+      </ContactList>
     );
   }
 }
@@ -27,5 +29,11 @@ export { Contacts };
 
 // Types
 Contacts.propTypes = {
-  // message: PropTypes.string,
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+    })
+  ),
+  onDeleteUser: PropTypes.func.isRequired,
 };
