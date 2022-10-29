@@ -34,9 +34,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-      /* background: #e7ecf2; */
-      /* background-image: linear-gadient(to bottom right, #ff9eaa 0% 65%, #e860ff 95% 100%); */
-      /* background: linear-gradient(to right, transparent, mistyrose); */
+      background-color: #f5f6fa;
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
